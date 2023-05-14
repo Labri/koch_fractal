@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 	init_parameters(&param, argc, argv);
 	show_parameters(&param);
 	init_koch(&koch, param.image_size, param.segment_length);
-        if(strcmp(argv[6], "all") == 0 && param.nb_iterations > 0){
+        if(strcmp(argv[6], "all") == 0 && param.nb_iterations > 0){  // XXXX
 		/* Si l'utilisateur a rentré en argument 'all' 
 		   alors on affiche chaque image pour chaque itération*/
 		char *name[param.nb_iterations];
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 		}
 		show_koch_list(koch);
 		render_image_bresenham(picture, koch, param.image_size, param.fg_color);
-	        create_image_ppm(picture, param.image_size, param.image_size, param.outfile);
+	    create_image_ppm(picture, param.image_size, param.image_size, param.outfile);
 	}
 	free_koch(koch);
 	return EXIT_SUCCESS;
