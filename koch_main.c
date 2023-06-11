@@ -25,11 +25,11 @@ int main(int argc, char **argv)
 	init_parameters(&param, argc, argv);
 	show_parameters(&param);
 	init_koch(&koch, param.image_size, param.segment_length);
-        if(strcmp(argv[6], "all") == 0 && param.nb_iterations > 0){  // XXXX
+        if(strcmp(argv[6], "all") == 0 && param.nb_iterations > 0){
 		/* Si l'utilisateur a rentré en argument 'all' 
 		   alors on affiche chaque image pour chaque itération*/
 		char *name[param.nb_iterations];
-		for(int i = 1; i <= param.nb_iterations; i++){
+		for(int32_t i = 1; i <= param.nb_iterations; i++){
 			sprintf(*name, "%i_koch.ppm", i);
 			printf("génération de la %dieme image %s \n", i, *name);
 			generer_koch(koch, 1);
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 		}
 		show_koch_list(koch);
 		render_image_bresenham(picture, koch, param.image_size, param.fg_color);
-	    create_image_ppm(picture, param.image_size, param.image_size, param.outfile);
+	        create_image_ppm(picture, param.image_size, param.image_size, param.outfile);
 	}
 	free_koch(koch);
 	return EXIT_SUCCESS;
