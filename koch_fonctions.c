@@ -126,8 +126,9 @@ void render_image_bresenham(uint32_t *picture, struct list *koch, uint32_t size,
 		sy = (y0 < y1) ? 1 : -1;
 
 
-		int32_t err = dx - dy, e2;
+		int32_t err = dx - dy;
 		while(x0 != x1 || y0 != y1){
+		int32_t e2;
 			picture[x0 * size + y0] = fg_color;
 			e2 = 2 * err;
 			if (e2 > -dy){
@@ -159,8 +160,9 @@ void render_image_bresenham(uint32_t *picture, struct list *koch, uint32_t size,
 
 
 	
-	int32_t err = dx - dy, e2;
+	int32_t err = dx - dy;
 	while(x0 != x1 || y0 != y1){
+	int32_t e2;
 		picture[x0 * size + y0] = fg_color;
 		e2 = 2 * err;
 		if (e2 > -dy){

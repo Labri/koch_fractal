@@ -1,5 +1,5 @@
 # Koch fractal algorithm - C
-* Presonnal project for ENSIMAG, implementation of Koch fractals generator.
+* Personal project for ENSIMAG, implementation of Koch fractals generator.
 
 ## Usage:
  * make clean

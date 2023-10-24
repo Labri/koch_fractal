@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 		/* Si l'utilisateur a rentré en argument 'all' 
 		   alors on affiche chaque image pour chaque itération*/
 		char *name[param.nb_iterations];
-		for(uint32_t i = 1; i <= param.nb_iterations; i++){
+		for(int32_t i = 1; i <= param.nb_iterations; i++){
 			sprintf(*name, "%i_koch.ppm", i);
 			printf("génération de la %dieme image %s \n", i, *name);
 			generer_koch(koch, 1);

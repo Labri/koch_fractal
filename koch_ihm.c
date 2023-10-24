@@ -41,7 +41,7 @@ void show_parameters(const struct parameters *parameters)
 {
 	//Affichage des parametres 
 	printf("shox param : \n");
-	printf("segment length => %d\nimage size => %d\nfg_color => %d\nfile =>%s\n", 
+	printf("segment length => %u\nimage size => %u\nfg_color => %u\nfile =>%s\n", 
 	       parameters->segment_length, parameters->image_size ,parameters->fg_color,
 	       parameters->outfile);
 }

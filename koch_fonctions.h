@@ -25,7 +25,7 @@ struct parameters {
     uint32_t image_size;
 
     /* nombre d'iterations du calcul la fractale de Koch */
-    uint32_t nb_iterations; 
+    int32_t nb_iterations; 
 
     /* couleur du trace de la fractale */
     uint32_t fg_color;
